@@ -1,0 +1,7 @@
+﻿<div ng-class="{boldTitle: (row.entity.LineStyleCode == 'R' || row.entity.Line_Type == 'T' ),
+        rowHighlight:  row.entity.LineStyleCode =='H',
+        redText:(row.entity.LineStyleCode =='R'),
+                    rowHeader: (row.entity.LineStyleCode == 'B')}"
+     class="level{{row.entity.Level_No}}">
+    <!--<span ng-if="row.entity.Line_Type == 'T'" style="padding-left:40px">   </span>--> {{COL_FIELD}}
+</div>

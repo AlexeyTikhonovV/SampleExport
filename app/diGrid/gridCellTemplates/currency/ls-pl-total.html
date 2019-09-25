@@ -1,0 +1,23 @@
+﻿<div ng-class="{boldTitle: (row.entity.LineStyleCode == 'B' || row.entity.LineStyleCode == 'R'),
+                redText:(row.entity.LineStyleCode =='R'),
+                rowHighlight:  row.entity.LineStyleCode =='H'}"
+     class="cellValue-main">
+
+    <span ng-if="row.entity.Line_Text == 'Units'"
+         class="cellValue-centered cellUnit cellTotal">
+
+        {{COL_FIELD}}
+
+    </span>
+    <span ng-if="!(row.entity.Line_Text == 'Units')"
+         class="cellValue-main"
+         ng-class="{cellCurrency:(row.entity.Display_Format == 'D0'|| 'D2'),
+                    cellTotal:(row.entity.Display_Format == 'D0'|| 'D2'),
+                    'cellPercentage-total':(row.entity.Display_Format == 'P0'|| row.entity.Display_Format == 'P2')}">
+
+        {{COL_FIELD|displayFormatFilter: row.entity.Display_Format}}
+
+    </span>
+
+</div>
+

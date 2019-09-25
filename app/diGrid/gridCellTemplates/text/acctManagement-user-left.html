@@ -1,0 +1,12 @@
+﻿<div class="level0">
+
+    {{COL_FIELD}}
+    <span ng-if="row.entity.isDealerAdmin"
+          style="vertical-align: super;
+                    margin-left:5px;"
+          class="label label-danger">ADMIN</span>
+    <span ng-if="row.entity.lastModifiedOn == row.entity.created"
+          style="vertical-align: super;
+                    margin-left:5px;"
+          class="label label-warning">NEW USER</span>
+</div>

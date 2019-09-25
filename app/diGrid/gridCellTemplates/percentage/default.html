@@ -1,0 +1,11 @@
+﻿<div ng-class="{boldTitle:(row.entity.key == 'TOTAL'), rowHighlight: (row.entity.key == 'TOTAL'), negPercentage: (COL_FIELD < 0),
+                cellSubtotalTextStyle: (row.entity.value.style == 'S'), 
+                cellTotalTextStyle: (row.entity.value.style == 'T')}" 
+
+     class="cellValue-main cellPercentage">
+
+    <span ng-if="(row.entity.value.style != 'H')">
+        {{COL_FIELD | percentageFilter}}
+    </span>
+
+</div>

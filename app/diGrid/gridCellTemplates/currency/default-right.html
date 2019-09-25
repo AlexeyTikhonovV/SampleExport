@@ -1,0 +1,12 @@
+﻿<div ng-class="{'boldTitle':(row.entity.key == 'TOTAL'), 
+                'rowHighlight': (row.entity.line_type == 'T' || row.entity.row_type == 'T' || row.entity.key == 'TOTAL'), 
+                'cellSubtotalTextStyle': (row.entity.value.style == 'S'), 
+                'cellTotalTextStyle': (row.entity.value.style == 'T'),
+                'isAdjustmentCell': (row.entity.isAdjustmentEntry),    
+                'selected-row': (row.isSelected)}" 
+     class="cellValue-main cellCurrency">
+    
+    {{COL_FIELD|currency : "$" : 2}}
+
+</div>
+

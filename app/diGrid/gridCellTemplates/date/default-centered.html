@@ -1,0 +1,7 @@
+﻿<div ng-class="{'boldTitle':(row.entity.line_type == 'T' || row.entity.row_type == 'T'),
+                'rowHighlight': (row.entity.line_type == 'T' || row.entity.row_type == 'T'), 
+                'isAdjustmentCell': (row.entity.isAdjustmentEntry),
+                'selected-row': (row.isSelected)}" 
+     class="cellValue-centered">
+    {{COL_FIELD|date: 'yyyy-MM-dd'}}
+</div>

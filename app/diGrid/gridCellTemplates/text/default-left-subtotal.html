@@ -1,0 +1,11 @@
+﻿<div ng-class="{boldTitle:(row.entity.key == 'TOTAL'), 
+                rowHighlight: (row.entity.key == 'TOTAL' ),                 
+                cellHeaderTextStyle:(row.entity.value.style == 'H'),
+                cellSubtotalTextStyle:(row.entity.value.style == 'S'),
+                cellTotalTextStyle:(row.entity.value.style == 'T'),
+                cellElementTextStyle:(row.entity.value.style == 'E')}" 
+     class="level1 cellSubtotal">
+        
+        {{COL_FIELD}}
+
+</div>

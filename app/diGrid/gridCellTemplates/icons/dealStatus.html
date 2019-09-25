@@ -1,0 +1,9 @@
+﻿<div ng-class="{greenText:(row.entity.deal_status == 'F'), yellowText:((row.entity.deal_status != 'F')&&(row.entity.deal_status != 'U')), redText:(row.entity.deal_status == 'U')}" 
+     uib-tooltip="{{row.entity.deal_status | dealStatusFilter}}"
+     tooltip-placement="bottom"
+     tooltip-append-to-body="true"
+     tooltip-class="tooltipDI"
+     class="text-center cellIcon">
+    <i class="fa fa-circle" aria-hidden="true"></i>
+</div>
+

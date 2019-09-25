@@ -1,0 +1,13 @@
+﻿<div ng-class="{'boldTitle':(row.entity.key == 'TOTAL')||(row.entity.key == 'Total' ), 
+                'rowHighlight': (row.entity.key == 'TOTAL' )||(row.entity.key == 'Total' ),                 
+                'cellHeaderTextStyle':(row.entity.value.style == 'H'),
+                'cellSubtotalTextStyle':(row.entity.value.style == 'S'),
+                'cellTotalTextStyle':(row.entity.value.style == 'T'),
+                'cellElementTextStyle':(row.entity.value.style == 'E'), 
+                'isAdjustmentCell': (row.entity.isAdjustmentEntry),
+                'selected-row': (row.isSelected)}" 
+     class="level1">
+        
+        {{COL_FIELD}}
+
+</div>

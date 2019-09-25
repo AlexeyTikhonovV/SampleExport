@@ -1,0 +1,23 @@
+﻿<div ng-click="grid.appScope.toggle(row.entity)" ng-class="{boldTitle: row.entity.LineStyleCode == 'B'}" class="cellDD">
+    <div style="padding-top:0px"
+         ng-if="row.entity.Line_Text == 'Units'"
+         class="cellValue-centered cellUnit">
+
+        {{COL_FIELD}}
+
+    </div>
+    <div style="padding-top:0px"
+         ng-if="!(row.entity.Line_Text == 'Units')"
+         class="cellValue-main"
+         ng-class="{cellCurrency:(row.entity.Display_Format == 'D0'|| 'D2'),
+                    cellTotal:(row.entity.Display_Format == 'D0'|| 'D2'),
+                    'cellPercentage-total':(row.entity.Display_Format == 'P0'|| row.entity.Display_Format == 'P2')}">
+
+        {{COL_FIELD|displayFormatFilter: row.entity.Display_Format}}
+
+    </div>
+</div>
+
+
+
+

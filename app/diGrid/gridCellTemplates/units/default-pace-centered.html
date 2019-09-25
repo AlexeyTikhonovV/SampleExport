@@ -1,0 +1,10 @@
+﻿<div ng-class="{boldTitle: (row.entity.key == 'TOTAL'), 
+                rowHighlight: (row.entity.line_type == 'T' || row.entity.row_type == 'T' || row.entity.key == 'TOTAL'), 
+                subtotalStyle: (row.entity.value.style == 'S'), 
+                totalStyle: (row.entity.value.style == 'T')}" 
+     class="cellValue-centered cellPace">
+    
+    {{COL_FIELD | number: 0}}
+
+</div>
+

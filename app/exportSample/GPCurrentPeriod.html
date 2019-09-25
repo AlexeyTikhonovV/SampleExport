@@ -1,0 +1,51 @@
+﻿
+<div class="page-body">
+    <!-- HEADER START -->
+    <div class="diReport-title">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="pageTitle"> Gross Profit - Current Period - Sample Export </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <div class="noTabWindow noScroll">
+        <div class="container-fluid ng-cloak">
+            <div id="Service-GPCurrentPeriod" class="col-md-12">
+                <!-- -->
+                <div class="row text-center rowline ng-cloak">
+                    <div class="form-inline">
+                        <div class="col-md-12 form-group">
+
+                            <!-- EXPORT BUTTON START -->
+                            <export-button 
+                                           type="H2"
+                                           grid="gridApi1.grid"
+                                           filename="GrossProfitCurrentPeriod"
+                                           selectedmonth="selectedMonth"
+                                           selectedyear="selectedYear"
+                                           negmarg="true">
+                            </export-button>
+                            <!-- EXPORT BUTTON END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Service-GPCurrentPeriod GRID START -->
+                <!-- NONSUMMARY GRID -->
+                <div class="row">
+                    <div>
+                        <div id="Service-GPCurrentPeriod-grid" ui-grid="gridOptions1" ui-grid-exporter ui-grid-resize-columns ui-grid-selection ui-grid-pinning class="grid-noTabs">
+                            <grid-load-screen></grid-load-screen>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service-GPCurrentPeriod GRID END -->
+            </div>
+        </div>
+    </div>
+    <!-- MAIN END -->
+
+</div>

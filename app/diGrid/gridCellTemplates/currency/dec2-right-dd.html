@@ -1,0 +1,11 @@
+﻿<div ng-class="{boldTitle:(row.entity.key == 'TOTAL'), 
+                rowHighlight: (row.entity.line_type == 'T' || row.entity.row_type == 'T' || row.entity.key == 'TOTAL'), 
+                cellSubtotalTextStyle: (row.entity.value.style == 'S'), 
+                cellTotalTextStyle: (row.entity.value.style == 'T')}"  
+     ng-click="grid.appScope.toggle({'row':row, 'col':col})"
+     class="cellValue-main cellCurrency dd-hover">
+    
+    {{COL_FIELD|currency : "$" : 2}}
+
+</div>
+

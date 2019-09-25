@@ -1,0 +1,6 @@
+﻿<div ng-class="{'boldTitle':(row.entity.line_type == 'T' || row.entity.row_type == 'T' || row.entity.key == 'TOTAL'),
+         'rowHighlight': ((row.entity.line_type == 'T' && !row.isSelected) || (row.entity.row_type == 'T' && !row.isSelected) || (row.entity.key == 'TOTAL' && !row.isSelected) || (row.entity.value.style == 'T' && !row.isSelected)),
+         'selected-row': (row.isSelected)}"
+     class="cellValue-main cellCurrency cellSubtotal">
+    {{COL_FIELD|currency : "$" : 0}}
+</div>

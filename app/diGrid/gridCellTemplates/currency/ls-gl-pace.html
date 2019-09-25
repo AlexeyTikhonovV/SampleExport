@@ -1,0 +1,9 @@
+﻿<div ng-class="{boldTitle: (row.entity.LineStyleCode == 'B' || row.entity.LineStyleCode == 'R'  || row.entity.Line_Type == 'T'), 
+     rowHighlight:  row.entity.LineStyleCode =='H',           
+     redText:(row.entity.LineStyleCode =='R')}" 
+     class="cellValue-main currencyCell cellPace">
+
+    {{COL_FIELD|displayFormatFilter: row.entity.Display_Format}}
+
+</div>
+

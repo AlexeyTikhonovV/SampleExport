@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- JQuery -->
+        <script src="Scripts/JQuery/3.2.0/jquery.min.js"></script>
+        
+        <!-- Moment JS -->
+        <script src="Scripts/MomentJS/moment.js"></script>
+        
+        <!-- Angular -->
+        <script src="Scripts/AngularJS/angular.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-sanitize.min.js"></script>
+
+        <script src="Scripts/AngularJS/angular-animate.js"></script>
+        <script src="Scripts/AngularJS/angular-resource.js"></script>
+        <script src="Scripts/AngularJS/angular-route.js"></script>
+        <script src="Scripts/AngularJS/angular-touch.js"></script>
+        
+        <!-- Bootstrap -->
+        <script src="Scripts/Bootstrap/3.3.7/bootstrap.min.js"></script>
+        <link href="Scripts/Bootstrap/3.3.7/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- UI Grid -->
+        <link href="Scripts/UIGrid/4.0.6/ui-grid.css" rel="stylesheet" />
+        <script src="Scripts/UIGrid/4.0.6/ui-grid.js"></script>
+        <script src="Scripts/UIGrid/grunt-scripts/csv.js"></script>
+        <script src="Scripts/UIGrid/grunt-scripts/pdfmake.js"></script>
+        <script src="Scripts/UIGrid/grunt-scripts/vfs_fonts.js"></script>
+
+
+        <!-- XLS Export-->
+        <script src="Scripts/SheetJS/xlsx.full.min.js"></script>
+        <script src="Scripts/FileSaverJS/FileSaver.min.js"></script>
+
+
+        <script src="app/app.js"></script>
+        <script src="app/core.filters.js"></script>
+        <script src="app/exportSample/GPCurrentPeriod.js"></script>
+        <script src="app/exportSample/GPCurrentPeriodSvc.factory.js"></script>
+
+        <!-- DI GRID MODULE -->
+        <script src="app/diGrid/diGrid.js"></script>
+        <script src="app/diGrid/diGrid.constants.js"></script>
+        <script src="app/diGrid/exportButton/exportButton.directive.js"></script>
+        <script src="app/diGrid/exportButton/XLS.factory.js"></script>
+        <script src="app/diGrid/factories/AggregatorHelper.factory.js"></script>
+        <script src="app/diGrid/factories/GridAggregator.factory.js"></script>
+        <script src="app/diGrid/factories/GridHelper.factory.js"></script>
+        <script src="app/diGrid/factories/MTDHelper.factory.js"></script>
+        <script src="app/diGrid/factories/YTDHelper.factory.js"></script>
+        <script src="app/diGrid/gridLoadScreen/gridLoadScreen.directive.js"></script>
+        <script src="app/diGrid/factories/StatsSvc.js"></script>
+        <script src="app/diGrid/factories/saleTypes.factory.js"></script>
+        <script src="app/diGrid/factories/laborTypes.factory.js"></script>
+        <script src="app/diGrid/factories/incomeTypes.factory.js"></script>
+        <script src="app/diGrid/factories/sortResource.factory.js"></script>
+        <script src="app/diGrid/factories/SortResourceService.factory.js"></script>
+        <script src="app/diGrid/factories/sortResourceFI.factory.js"></script>
+
+        <link href="Content/Stylesheet.css" rel="stylesheet"/>
+
+    </head>
+
+
+    <body ng-app="app">
+        <div ng-controller="ExportSampleCtrl">
+            <div class="page-body">
+                <!-- HEADER START -->
+                <div class="diReport-title">
+                    <div class="container-fluid">
+                        <div class="col-md-12">
+                            <div class="pageTitle">Sample Export </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- HEADER END -->
+            
+                <!-- MAIN START -->
+                <div class="noTabWindow noScroll">
+                    <div class="container-fluid ng-cloak">
+                        <div id="Service-GPCurrentPeriod" class="col-md-12">
+                            <!-- -->
+                            <div class="row text-center rowline ng-cloak">
+                                <div class="form-inline">
+                                    <div class="col-md-12 form-group">
+            
+                                        <!-- EXPORT BUTTON START -->
+                                        <export-button 
+                                                       type="H2"
+                                                       grid="gridApi1.grid"
+                                                       filename="GrossProfitCurrentPeriod"
+                                                       selectedmonth="selectedMonth"
+                                                       selectedyear="selectedYear"
+                                                       negmarg="true">
+                                        </export-button>
+                                        <!-- EXPORT BUTTON END -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service-GPCurrentPeriod GRID START -->
+                            <!-- NONSUMMARY GRID -->
+                            <div class="row">
+                                <div>
+                                    <div id="Service-GPCurrentPeriod-grid" ui-grid="gridOptions1" ui-grid-exporter ui-grid-resize-columns ui-grid-selection ui-grid-pinning class="grid-noTabs">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Service-GPCurrentPeriod GRID END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- MAIN END -->
+            
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<div style="text-align: center; padding-right:0px">
+    <i class="fa fa-calendar-check-o greenText"
+       ng-if="(grid.appScope.getDateDifference(row.entity) <= 30)"
+       uib-tooltip="Less than 31 days in stock"
+       tooltip-append-to-body="true"
+       tooltip-placement="right"
+       tooltip-class="tooltipDI"
+        aria-hidden="true"></i>
+    <i class="fa fa-calendar-check-o orangeText"
+       ng-if="((grid.appScope.getDateDifference(row.entity) >= 31) && (grid.appScope.getDateDifference(row.entity) <= 60 ))"
+       uib-tooltip="Between 30 and 60 days in stock"
+       tooltip-append-to-body="true"
+       tooltip-placement="right"
+       tooltip-class="tooltipDI"
+        aria-hidden="true"></i>
+    <i class="fa fa-calendar-check-o redText"
+       ng-if="grid.appScope.getDateDifference(row.entity) > 60"
+       uib-tooltip="Greater than 60 days in stock"
+       tooltip-append-to-body="true"
+       tooltip-placement="right"
+       tooltip-class="tooltipDI"
+       aria-hidden="true"></i>
+</div>

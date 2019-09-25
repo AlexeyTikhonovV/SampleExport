@@ -1,0 +1,12 @@
+﻿<div ng-class="{'boldTitle':(row.entity.line_type == 'T' || row.entity.row_type == 'T' || row.entity.key == 'TOTAL'),
+         'rowHighlight': ((row.entity.line_type == 'T' && !row.isSelected) || (row.entity.row_type == 'T' && !row.isSelected) || (row.entity.key == 'TOTAL' && !row.isSelected) || (row.entity.value.style == 'T' && !row.isSelected)),
+         'isAdjustmentCell': (row.entity.isAdjustmentEntry),    
+         'selected-row': (row.isSelected)}"
+     class="ui-grid-cell-contents rightGridBorder cellLineNumber">
+
+    {{grid.renderContainers.body.visibleRowCache.indexOf(row)+1}}
+
+</div>
+
+
+

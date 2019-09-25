@@ -1,0 +1,5 @@
+﻿<div ng-class="{boldTitle:row.entity.LineStyleCode == 'B', rowHighlight: (row.entity.LineStyleCode == null)? false: row.entity.LineStyleCode == 'H', posPercentage: (COL_FIELD > 0), negPercentage: (COL_FIELD < 0)}" 
+     class="cellValue-main cellPercentage-total">
+    {{COL_FIELD | percentageFilter}}
+</div>
+

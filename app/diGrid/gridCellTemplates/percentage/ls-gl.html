@@ -1,0 +1,4 @@
+﻿<div ng-class="{'boldTitle': (row.entity.LineStyleCode == 'B' || row.entity.Line_Type == 'T'), rowHighlight:  row.entity.LineStyleCode =='H', posPercentage: (COL_FIELD > 0), negPercentage: (COL_FIELD < 0)}" 
+     class="cellValue-main cellPercentage">
+    {{COL_FIELD | percentageFilter}}
+</div>

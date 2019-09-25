@@ -1,0 +1,16 @@
+﻿<div class="text-center" style="padding-left:0px;padding-right:0px">
+    <i ng-if="grid.appScope.isClosedIP(row.entity)" 
+       uib-tooltip="Closed RO"
+       tooltip-placement="right"
+       tooltip-append-to-body="true"
+       class="fa fa-calendar-check-o greenText" 
+       aria-hidden="true"></i>
+    <i ng-if="!grid.appScope.isClosedIP(row.entity)" 
+       uib-tooltip="Closed In Process" 
+       tooltip-placement="right"
+       tooltip-append-to-body="true"
+       class="fa fa-calendar-minus-o yellowText" 
+       aria-hidden="true"></i>
+
+</div>
+

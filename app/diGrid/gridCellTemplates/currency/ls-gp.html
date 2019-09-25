@@ -1,0 +1,27 @@
+﻿<div ng-class="{'boldTitle': row.entity.LineStyleCode == 'B', 
+                'dd-hover': ((row.entity.Line_Type != 'T') && (row.entity.Line_Type != 'H')),
+                'rowHighlight': (row.entity.LineStyleCode == null)? false: row.entity.LineStyleCode =='H'}" 
+     class="cellDD">
+
+        <div style="padding-top:0px; padding-right: 0px;" 
+             ng-if="row.entity.Line_Text == 'Units'" 
+             class="cellValue-centered cellUnit">
+
+                {{COL_FIELD}}
+
+        </div>
+        <div style="padding-top:0px; padding-right: 0px;" 
+             ng-if="!(row.entity.Line_Text == 'Units')" 
+             class="cellValue-main cellCurrency"
+             ng-class="{'cellCurrency':(row.entity.Display_Format == 'D0'|| 'D2'),
+                        'cellPercentage':(row.entity.Display_Format == 'P0'|| row.entity.Display_Format == 'P2')}">
+
+                {{COL_FIELD|displayFormatFilter: row.entity.Display_Format}}
+
+        </div>
+
+</div>
+
+
+
+

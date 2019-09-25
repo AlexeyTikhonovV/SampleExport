@@ -1,0 +1,21 @@
+﻿<div class="text-center" style="padding-right:0px">
+    <i ng-if="(row.entity.DaysOpen < 8)" 
+       class="fa fa-circle greenText" 
+       uib-tooltip="Open less than 7 days"
+       tooltip-placement="right"
+       tooltip-append-to-body="true"
+       aria-hidden="true"></i>
+    <i ng-if="((row.entity.DaysOpen >7)&&(row.entity.DaysOpen < 22))" 
+       class="fa fa-circle yellowText"
+       uib-tooltip="Open between 7 and 21 days"
+       tooltip-placement="right"
+       tooltip-append-to-body="true"
+       aria-hidden="true"></i>
+    <i ng-if="(row.entity.DaysOpen > 21)"
+       class="fa fa-circle redText" 
+       uib-tooltip="Open more than 21 days"
+       tooltip-placement="right"
+       tooltip-append-to-body="true"
+       aria-hidden="true"></i>
+</div>
+

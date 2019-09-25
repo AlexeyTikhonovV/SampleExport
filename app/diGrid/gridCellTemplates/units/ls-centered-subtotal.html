@@ -1,0 +1,9 @@
+﻿<div ng-class="{'boldTitle': (row.entity.line_type == 'T'|| row.entity.row_type == 'T'),
+     'rowHighlight': ((row.entity.line_type == 'T' && !row.isSelected) || (row.entity.row_type == 'T' && !row.isSelected)),
+     'subtotalStyle': (row.entity.value.style == 'S'),
+     'selected-row': (row.isSelected),
+     'totalStyle': (row.entity.value.style == 'T')}"
+     class="cellValue-centered cellUnit cellSubtotal">
+    {{COL_FIELD | number: 0}}
+</div>
+

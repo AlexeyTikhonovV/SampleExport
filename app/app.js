@@ -18,7 +18,6 @@
             'ngRoute',
             'ngTouch',
             'ngSanitize', 
-
             'di.Sample',
             'app.diGrid'
         ])
